@@ -65,9 +65,9 @@ namespace ConsoleApp1.Classes
         //    return UserLists.Select(m => m.Items).Select(v => v.Where(f => f.Name == name)).First();
         //}
 
-        public IEnumerable<IElement> FindElementsByName(string name)
+        public ICollection<IElement> FindElementsByName(string name)
         {
-            return Items.Where(f => f.Name == name);
+            return Items.Where(f => f.Name == name).ToList();
         }
 
         public IEnumerable<IElement> FindElementsByMediaList(Guid id, string name)

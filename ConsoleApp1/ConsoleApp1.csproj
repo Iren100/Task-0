@@ -55,6 +55,7 @@
     <Compile Include="Classes\UserLists\ImageUserList.cs" />
     <Compile Include="Classes\UserLists\VideoUserList.cs" />
     <Compile Include="Classes\UserLists\AudioUserList.cs" />
+    <Compile Include="Interfaces\IMediaStreamable.cs" />
     <Compile Include="Interfaces\IPlayableAdapter.cs" />
     <Compile Include="Classes\MediaStorage.cs" />
     <Compile Include="Classes\Player.cs" />
@@ -64,7 +65,6 @@
     <Compile Include="Enums\PlayableType.cs" />
     <Compile Include="D:\Program_0.cs" />
     <Compile Include="Interfaces\IMediaStorage.cs" />
-    <Compile Include="Interfaces\IMediaStreamable.cs" />
     <Compile Include="Interfaces\IElement.cs" />
     <Compile Include="Interfaces\IDuratible.cs" />
     <Compile Include="Interfaces\IMediaList.cs" />

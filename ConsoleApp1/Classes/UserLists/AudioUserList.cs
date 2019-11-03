@@ -5,7 +5,7 @@ using ConsoleApp1.Enums;
 
 namespace ConsoleApp1.Classes
 {
-    public abstract class AudioUserList: Element, IMediaList, IPlayable
+    public class AudioUserList: Element, IMediaList, IPlayable
     {
         public ICollection<IElement> Items { get; private set; }
 

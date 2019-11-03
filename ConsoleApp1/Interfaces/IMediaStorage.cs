@@ -19,7 +19,7 @@ namespace ConsoleApp1.Interfaces
 
         IElement IElementFindById(Guid id);
 
-        IEnumerable<IElement> FindElementsByName(string name);
+        ICollection<IElement> FindElementsByName(string name);
 
         IEnumerable<IElement> FindElementsByMediaList(Guid id, string name);
 
