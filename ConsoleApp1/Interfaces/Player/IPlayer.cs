@@ -6,8 +6,8 @@ namespace ConsoleApp1.Interfaces
     {
         IPlayableAdapterFactory Factory { get; set; }
 
-        void Play(IPlayable playable, IPlayerContext playerContext);
+        void Play(IPlayable playable);
 
-        void Play(IEnumerable<IPlayable> playable, IPlayerContext playerContext);
+        void Play(IEnumerable<IPlayable> playable);
     }
 }

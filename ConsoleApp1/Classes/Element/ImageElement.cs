@@ -5,16 +5,19 @@ using ConsoleApp1.Interfaces;
 
 namespace ConsoleApp1.Classes
 {
-    public class ImageElement: Element, IMediaStreamable, IPlayable
+    public class ImageElement: Element, IDuratible, IPlayable
     {
-        public FileInfo FileInfo { get; private set; }
+        private FileInfo FileInfo { get; set; }
         public StreamReader Stream { get { return new StreamReader(FileInfo.FullName); } }
 
         public PlayableType PlayableType => PlayableType.Image;
 
-        public ImageElement(Guid id, string name)
+        public TimeSpan? Duration { get; }
+
+        public ImageElement(Guid id, string name, TimeSpan? duration)
           : base(id, name)
         {
+            Duration = duration;
         }
     }
 }

@@ -10,10 +10,5 @@ namespace ConsoleApp1.Classes
         {
             Console.WriteLine("Проигрывание файла изображения");
         }
-
-        public void Play(IEnumerable<IPlayable> playables, IPlayerContext playerContext)
-        {
-            Console.WriteLine("Проигрывание файлов изображений");
-        }
     }
 }

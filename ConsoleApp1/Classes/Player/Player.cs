@@ -5,6 +5,8 @@ namespace ConsoleApp1.Classes
 {
     class Player: IPlayer
     {
+        private IPlayerContext playerContext = new PlayerContext();
+
         public IPlayableAdapterFactory Factory { get; set; }
 
         public Player(IPlayableAdapterFactory playableAdapterFactory)
@@ -12,14 +14,15 @@ namespace ConsoleApp1.Classes
             Factory = playableAdapterFactory;
         }
 
-        public void Play(IPlayable playable, IPlayerContext playerContext)
+        public void Play(IPlayable playable)
         {
             Factory.Create().Play(playable, playerContext);
         }
 
-        public void Play(IEnumerable<IPlayable> playables, IPlayerContext playerContext)
+        public void Play(IEnumerable<IPlayable> playables)
         {
-            Factory.Create().Play(playables, playerContext);
+            foreach(IMediaList playable in playables)
+                Factory.Create().Play(playable, playerContext);
         }
     }
 }

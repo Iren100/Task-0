@@ -3,8 +3,8 @@
 namespace ConsoleApp1.Interfaces
 {
     //продолжительность
-    interface IDuratible
+    public interface IDuratible
     {
-        TimeSpan Duration { get; set; }
+        TimeSpan? Duration { get; }
     }
 }

@@ -5,18 +5,19 @@ using ConsoleApp1.Interfaces;
 
 namespace ConsoleApp1.Classes
 {
-    public class AudioElement: Element, IMediaStreamable, IPlayable
+    public class AudioElement: Element, IDuratible, IPlayable
     {
-        public FileInfo FileInfo { get; private set; }
+        private FileInfo FileInfo { get; set; }
         public StreamReader Stream { get { return new StreamReader(FileInfo.FullName); } }
-
-        public TimeSpan Duration { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public PlayableType PlayableType => PlayableType.Audio;
 
-        public AudioElement(Guid id, string name)
+        public TimeSpan? Duration { get; }
+
+        public AudioElement(Guid id, string name, TimeSpan? duration)
           : base(id, name)
         {
+            Duration = duration;
         }
     }
 }

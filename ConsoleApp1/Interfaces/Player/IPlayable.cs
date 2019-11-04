@@ -6,5 +6,7 @@ namespace ConsoleApp1.Interfaces
     public interface IPlayable
     {
         PlayableType PlayableType { get;  }
+
+        StreamReader Stream { get; }
     }
 }
