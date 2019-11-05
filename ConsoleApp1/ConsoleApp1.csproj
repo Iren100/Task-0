@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Element\AudioElement.cs" />
-    <Compile Include="Classes\Element\Element.cs" />
+    <Compile Include="Classes\Element\Base\Element.cs" />
     <Compile Include="Classes\Element\ImageElement.cs" />
     <Compile Include="Classes\Player\Adapters\ImagePlayerAdapter.cs" />
     <Compile Include="Classes\Player\Adapters\AudioPlayerAdapter.cs" />
@@ -56,7 +56,7 @@
     <Compile Include="Interfaces\Player\IPlayableAdapter.cs" />
     <Compile Include="Classes\MediaStorage\MediaStorage.cs" />
     <Compile Include="Classes\Player\Player.cs" />
-    <Compile Include="Classes\MediaList\UserList.cs" />
+    <Compile Include="Classes\MediaList\Base\UserList.cs" />
     <Compile Include="Classes\Element\VideoElement.cs" />
     <Compile Include="Classes\Player\Adapters\VideoPlayerAdapter.cs" />
     <Compile Include="Enums\PlayableType.cs" />

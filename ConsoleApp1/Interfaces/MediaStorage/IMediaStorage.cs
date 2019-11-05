@@ -5,26 +5,26 @@ namespace ConsoleApp1.Interfaces
 {
     interface IMediaStorage
     {
-        void AddElement(IPlayable element);
+        void AddPlayable(IPlayable IPlayable);
 
         void AddMediaList(IMediaList mediaList);
 
-        void AddElementFromMediaList(IMediaList mediaList, IPlayable element);
+        void AddPlayableFromMediaList(IMediaList mediaList, IPlayable IPlayable);
 
-        void RemoveElement(Guid id);
+        void RemoveIPlayable(Guid id);
 
         void RemoveMediaList(Guid id);
 
-        void RemoveElementFromMediaList(IMediaList mediaList, IPlayable element);
+        void RemoveIPlayableFromMediaList(IMediaList mediaList, IPlayable IPlayable);
 
         IPlayable IPlayableFindById(Guid id);
 
-        ICollection<IPlayable> FindElementsByName(string name);
+        IEnumerable<IPlayable> IPlayablesFindByName(string name);
 
-        IEnumerable<IPlayable> FindElementsByMediaList(Guid id, string name);
+        IEnumerable<IPlayable> IPlayablesFindByMediaList(Guid id, string name);
 
         IMediaList IMediaListFindById(Guid id);
 
-        IEnumerable<IMediaList> FindMediaLists(string name);
+        IEnumerable<IMediaList> IMediaListsFindByName(string name);
     }
 }

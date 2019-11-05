@@ -20,9 +20,9 @@ namespace ConsoleApp1.Classes
 
         #region Operations
 
-        public void AddElement(IPlayable element)
+        public void AddPlayable(IPlayable IPlayable)
         {
-            Items.Add(element);
+            Items.Add(IPlayable);
         }
 
         public void AddMediaList(IMediaList mediaList)
@@ -30,12 +30,12 @@ namespace ConsoleApp1.Classes
             UserLists.Add(mediaList);
         }
 
-        public void AddElementFromMediaList(IMediaList mediaList, IPlayable element)
+        public void AddPlayableFromMediaList(IMediaList mediaList, IPlayable IPlayable)
         {
-            mediaList.Items.Add(element);
+            mediaList.Items.Add(IPlayable);
         }
 
-        public void RemoveElement(Guid id)
+        public void RemoveIPlayable(Guid id)
         {
             Items.Remove(IPlayableFindById(id));
         }
@@ -45,9 +45,9 @@ namespace ConsoleApp1.Classes
             UserLists.Remove(IMediaListFindById(id));
         }
 
-        public void RemoveElementFromMediaList(IMediaList mediaList, IPlayable element)
+        public void RemoveIPlayableFromMediaList(IMediaList mediaList, IPlayable IPlayable)
         {
-            mediaList.Items.Remove(element);
+            mediaList.Items.Remove(IPlayable);
         }
 
         public IPlayable IPlayableFindById(Guid id)
@@ -55,24 +55,24 @@ namespace ConsoleApp1.Classes
             return Items.Where(f => ((IElement)f).Id == id).First();
         }
 
-        public ICollection<IPlayable> FindElementsByName(string name)
+        public IEnumerable<IPlayable> IPlayablesFindByName(string name)
         {
             return Items.Where(f => ((IElement)f).Name == name).ToList();
         }
 
-        public IEnumerable<IPlayable> FindElementsByMediaList(Guid id, string name)
+        public IEnumerable<IPlayable> IPlayablesFindByMediaList(Guid id, string name)
         {
             return IMediaListFindById(id).Items.Where(f => ((IElement)f).Name == name);
         }
 
         public IMediaList IMediaListFindById(Guid id)
         {
-            return UserLists.Where(v => ((IElement)v).Id == id).First();
+            return UserLists.Where(v => v.Id == id).First();
         }
 
-        public IEnumerable<IMediaList> FindMediaLists(string name)
+        public IEnumerable<IMediaList> IMediaListsFindByName(string name)
         {
-            return UserLists.Where(v => ((IElement)v).Name == name);
+            return UserLists.Where(v => v.Name == name);
         }
 
         #endregion

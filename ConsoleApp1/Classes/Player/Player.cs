@@ -21,7 +21,7 @@ namespace ConsoleApp1.Classes
 
         public void Play(IEnumerable<IPlayable> playables)
         {
-            foreach(IMediaList playable in playables)
+            foreach(IPlayable playable in playables)
                 Factory.Create().Play(playable, playerContext);
         }
     }

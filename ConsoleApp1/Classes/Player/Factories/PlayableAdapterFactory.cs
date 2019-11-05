@@ -1,6 +1,5 @@
 ﻿using ConsoleApp1.Interfaces;
 using ConsoleApp1.Enums;
-using System;
 
 namespace ConsoleApp1.Classes
 {
