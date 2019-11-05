@@ -5,11 +5,9 @@ namespace ConsoleApp1.Classes
 {
     class PlayableAdapterFactory : IPlayableAdapterFactory
     {
-        private PlayableType PlayableType { get; }
-
         public IPlayableAdapter Create(PlayableType playableType)
         {
-            switch (PlayableType)
+            switch (playableType)
             {
                 case PlayableType.Audio:
                     {
