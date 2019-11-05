@@ -14,10 +14,11 @@ namespace ConsoleApp1.Classes
 
         public TimeSpan? Duration { get; }
 
-        public ImageElement(Guid id, string name, TimeSpan? duration)
+        public ImageElement(Guid id, string name, TimeSpan? duration, FileInfo fileInfo)
           : base(id, name)
         {
             Duration = duration;
+            FileInfo = fileInfo;
         }
     }
 }

@@ -14,10 +14,11 @@ namespace ConsoleApp1.Classes
 
         public PlayableType PlayableType => PlayableType.Video;
 
-        public VideoElement(Guid id, string name, TimeSpan? duration)
+        public VideoElement(Guid id, string name, TimeSpan? duration, FileInfo fileInfo)
           : base(id, name)
         {
             Duration = duration;
+            FileInfo = fileInfo;
         }
     }
 }

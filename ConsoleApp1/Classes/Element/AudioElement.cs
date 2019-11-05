@@ -14,10 +14,11 @@ namespace ConsoleApp1.Classes
 
         public TimeSpan? Duration { get; }
 
-        public AudioElement(Guid id, string name, TimeSpan? duration)
+        public AudioElement(Guid id, string name, TimeSpan? duration, FileInfo fileInfo)
           : base(id, name)
         {
             Duration = duration;
+            FileInfo = fileInfo;
         }
     }
 }
