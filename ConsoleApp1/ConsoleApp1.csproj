@@ -60,7 +60,6 @@
     <Compile Include="Classes\Element\VideoElement.cs" />
     <Compile Include="Classes\Player\Adapters\VideoPlayerAdapter.cs" />
     <Compile Include="Enums\PlayableType.cs" />
-    <Compile Include="D:\Program_0.cs" />
     <Compile Include="Interfaces\MediaStorage\IMediaStorage.cs" />
     <Compile Include="Interfaces\Element\IElement.cs" />
     <Compile Include="Interfaces\Element\IDuratible.cs" />
@@ -69,6 +68,7 @@
     <Compile Include="Interfaces\Player\IPlayableAdapterFactory.cs" />
     <Compile Include="Interfaces\Player\IPlayer.cs" />
     <Compile Include="Interfaces\Player\IPlayerContext.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
