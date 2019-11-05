@@ -4,6 +4,6 @@ namespace ConsoleApp1.Interfaces
 {
     public interface IPlayableAdapterFactory
     {
-        IPlayableAdapter Create();
+        IPlayableAdapter Create(PlayableType playableType);
     }
 }

@@ -7,12 +7,7 @@ namespace ConsoleApp1.Classes
     {
         private PlayableType PlayableType { get; }
 
-        public PlayableAdapterFactory(PlayableType playableType)
-        {
-            PlayableType = playableType;
-        }
-
-        public IPlayableAdapter Create()
+        public IPlayableAdapter Create(PlayableType playableType)
         {
             switch (PlayableType)
             {
